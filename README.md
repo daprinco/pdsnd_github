@@ -9,7 +9,7 @@ Introduction to version control project
 ### Description
 This project tests your knowledge of version control.
 A remote repository was forked and cloned locally. Changes were done locally
-by updating README.md documentation and refactoring Python code from previous assignment. Changes are then pushed to remote repository.
+by updating README.md documentation and refactoring Python code from previous assignment. A documentation branch is added to the master branch to track changes in the README.md and docstring in python code. Changes are then pushed to remote repository.
 
 ### Files used
 bikeshare.py
