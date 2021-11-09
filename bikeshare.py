@@ -1,3 +1,11 @@
+
+"""
+This program uses Python to understand U.S bikeshare data.
+Calculate statistics and build an interactive environment
+where a user chooses the data and filter for a dataset to
+analyzed.
+
+"""
 import time
 import pandas as pd
 import numpy as np
