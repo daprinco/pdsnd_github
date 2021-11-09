@@ -16,3 +16,5 @@ bikeshare.py
 README.md
 
 ### Credits
+How to resolve password authentication problem in git:
+https://stackoverflow.com/questions/68775869/support-for-password-authentication-was-removed-please-use-a-personal-access-to
