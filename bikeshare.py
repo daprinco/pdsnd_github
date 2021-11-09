@@ -210,6 +210,7 @@ def display(df):
 
 
 def main():
+    """ Main function calls all other methods/functions defined earlier """
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
