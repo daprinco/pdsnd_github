@@ -15,6 +15,8 @@ city_data = { 'chicago': 'chicago.csv',
 months_data = ['all', 'january', 'february', 'march', 'april', 'may', 'june']
 
 day_of_week= ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']
+
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -25,6 +27,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while True:
         try:
@@ -37,6 +40,7 @@ def get_filters():
             print('\nERROR: you entered wrong city name')
 
     # get user input for month (all, january, february, ... , june)
+
     while True:
         try:
             month = input("\n Please enter a month e.g january,february, ... , june or enter 'all' to display results for all months' \n").lower()
@@ -50,6 +54,7 @@ def get_filters():
     month = months_data.index(month)
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
+
     while True:
         try:
             day = input("\n Please enter day of week e.g monday,tuesday, ... , sunday or enter 'all' to apply no filter ' \n").lower()
@@ -65,6 +70,7 @@ def get_filters():
 
 
 def load_data(city, month, day):
+
     """
     Loads data for the specified city and filters by month and day if applicable.
 
@@ -75,12 +81,17 @@ def load_data(city, month, day):
     Returns:
         df - Pandas DataFrame containing city data filtered by month and day
     """
+
     # read appropriate csv file into a dataframe
+
     df = pd.read_csv(city_data[city])
 
     # convert the Start Time column to datetime
+
     df['Start Time'] = pd.to_datetime(df['Start Time'])
+
     # create new columns for month, hour and day of week from Start Time
+
     df['month'] = df['Start Time'].dt.month
     df['day'] = df['Start Time'].dt.weekday_name
     df['hour'] = df['Start Time'].dt.hour
@@ -184,14 +195,12 @@ def user_stats(df,city):
         print('Most recent birth from the given data is: {}\n'.format(most_recent_birth))
         print('Most common birth from the given data is: {}\n'.format(most_common_birth) )
 
-
-
-
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
 
 def display(df):
+
     """Displays subsequent raw data according to user request.
     Args:
         (DataFrame) df - filtered  DataFrame
